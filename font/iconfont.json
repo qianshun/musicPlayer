@@ -1,0 +1,51 @@
+{
+  "id": "2543043",
+  "name": "musaicPlayer",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1621429",
+      "name": "播放暂停",
+      "font_class": "bofangzanting",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "6207780",
+      "name": "顺序循环",
+      "font_class": "ziyuanldpi",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "9974807",
+      "name": "随机",
+      "font_class": "suiji",
+      "unicode": "e71f",
+      "unicode_decimal": 59167
+    },
+    {
+      "icon_id": "12753745",
+      "name": "上一首",
+      "font_class": "shangyishou_huaban",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "12753746",
+      "name": "下一首",
+      "font_class": "xiayishou_huaban",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "19594586",
+      "name": "播放",
+      "font_class": "play",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    }
+  ]
+}

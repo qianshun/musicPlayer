@@ -1,0 +1,28 @@
+* {
+	box-sizing: border-box;
+}
+
+h1:hover {
+	color: #0000ff;
+}
+
+
+
+.icon_lists{
+	font-size: 42px;
+}
+
+.icon {
+	display: block;
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.15em;
+	fill: #1d28ff;
+	-webkit-transition: font-size 0.25s linear, width 0.25s linear;
+	-moz-transition: font-size 0.25s linear, width 0.25s linear;
+	transition: font-size 0.25s linear, width 0.25s linear;
+}
+
+.icon_lists:hover {
+	font-size: 100px;
+}
