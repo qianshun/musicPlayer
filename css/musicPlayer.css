@@ -1,28 +1,75 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
 }
 
 h1:hover {
-	color: #0000ff;
+    color: #0000ff;
 }
 
+#img-container {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
 
+/* 定义旋转动画 */
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 
-.icon_lists{
-	font-size: 42px;
+.playimg {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* 360°旋转，默认不动 */
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+}
+
+#action-div {
+    margin: auto;
+    width: 60%;
+    height: 100px;
+}
+
+#action-div:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.icon_lists {
+    margin-top: 20px;
+    display: flex;
+    text-align: justify;
+    float: left;
+    width: 25%;
+    height: 100px;
+    font-size: 42px;
+
 }
 
 .icon {
-	display: block;
-	width: 1em;
-	height: 1em;
-	vertical-align: -0.15em;
-	fill: #1d28ff;
-	-webkit-transition: font-size 0.25s linear, width 0.25s linear;
-	-moz-transition: font-size 0.25s linear, width 0.25s linear;
-	transition: font-size 0.25s linear, width 0.25s linear;
+
+    display: block;
+    width: 1em;
+    height: 1em;
+    margin: auto;
+    /*vertical-align: -0.15em;*/
+    /*fill: #102fcc;*/
+    -webkit-transition: font-size 0.25s linear, width 0.25s linear;
+    -moz-transition: font-size 0.25s linear, width 0.25s linear;
+    transition: font-size 0.25s linear, width 0.25s linear;
 }
 
 .icon_lists:hover {
-	font-size: 100px;
+    font-size: 100px;
 }
