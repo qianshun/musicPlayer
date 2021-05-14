@@ -11,7 +11,7 @@ from flask import Flask, jsonify, make_response
 
 app = Flask(__name__)
 
-music_dir = u"C:\\Users\\qians\\Music"
+music_dir = u"E:\\歌曲\\KuGou"
 
 
 def file_name(file_dir):

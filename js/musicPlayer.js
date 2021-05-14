@@ -3,8 +3,8 @@ const player = $("#autio")[0]; /*jquery对象转换成js对象*/
 var musicList = ['花海 - 周杰伦.mp3', '蔡健雅 - 红色高跟鞋.mp3']
 var musicIndex = 0
 var playModel = 0
-const musicListUrl = "http://192.168.0.152:9900/music"
-const musicUrl = "http://192.168.0.152:8888/"
+const musicListUrl = "http://192.168.0.8:9900/music"
+const musicUrl = "http://192.168.0.8:8889/歌曲/KuGou/"
 
 // 点击播放
 $('#action').click(function() {

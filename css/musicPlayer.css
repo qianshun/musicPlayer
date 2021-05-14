@@ -3,9 +3,17 @@
 }
 
 body {
+	margin: 0;
     text-align: center;
 }
-
+#player-control{
+	top: 0;
+	left: 0;
+	background:#fff;
+	width: 100%;
+	position:fixed;
+	z-index:2;
+}
 h1:hover {
     color: #0000ff;
 }
@@ -92,7 +100,7 @@ h1:hover {
 }
 
 #music-list{
-	
+	margin-top: 500px;
 	cursor: pointer;
 	margin-left: 30%;
 	margin-right:30% ;
