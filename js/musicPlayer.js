@@ -1,8 +1,10 @@
 const player = $("#autio")[0]; /*jquery对象转换成js对象*/
-const musicList = ['花海 - 周杰伦.mp3', '蔡健雅 - 红色高跟鞋.mp3']
+// const musicList = ['花海 - 周杰伦.mp3', '蔡健雅 - 红色高跟鞋.mp3']
+var musicList = ['花海 - 周杰伦.mp3', '蔡健雅 - 红色高跟鞋.mp3']
 var musicIndex = 0
 var playModel = 0
-
+const musicListUrl = "http://192.168.0.152:9900/music"
+const musicUrl = "http://192.168.0.152:8888/"
 
 // 点击播放
 $('#action').click(function() {
@@ -30,12 +32,12 @@ function play() {
 	// console.log($('#action>use').attr("xlink:href"))
 	$('#action>use').attr("xlink:href", "#iconbofangzanting")
 
-	$('#autio').attr("src", musicList[musicIndex])
+	$('#autio').attr("src", musicUrl+musicList[musicIndex])
 	$('#music-name>h4').text(musicList[musicIndex])
 	$('#prosser-container').css("visibility", "visible")
 	$('#music-name').css("visibility", "visible")
-	$('.music').css('background-color','')
-	$('.music.'+musicIndex).css('background-color','#48fb48')
+	$('.music').css('background-color', '')
+	$('.music.' + musicIndex).css('background-color', '#48fb48')
 	player.play()
 }
 
@@ -90,9 +92,9 @@ player.ontimeupdate = function(e) {
 }
 
 function nextsong() {
-	if(playModel==1){
+	if (playModel == 1) {
 		console.log('   playModel   ' + playModel)
-		musicIndex = Math.floor(Math.random()*musicList.length)
+		musicIndex = Math.floor(Math.random() * musicList.length)
 		console.log('   musicIndex   ' + musicIndex)
 	}
 	if (++musicIndex == musicList.length) {
@@ -115,23 +117,38 @@ function prevSong() {
 // 上一首
 $('#prev').click(prevSong)
 
-function clickmusic(index){
+function clickmusic(index) {
 	var imgstatus = $('.playimg').css("animation-play-state")
-	if(musicIndex==index&&imgstatus == 'running'){
+	if (musicIndex == index && imgstatus == 'running') {
 		return
 	}
-	musicIndex=index
-	
+	musicIndex = index
+
 	play()
 }
 
+// 歌曲结束后自动下一首
+player.onended = nextsong
+
 // 初始化
-$(document).ready(function(){
+$(document).ready(function() {
+	$.ajaxSettings.async = false
+	$.getJSON(musicListUrl,
+		function(data) {
+			musicList = data
+			console.log(musicList)
+			
+		}
+	)
+	
 	console.log('document.ready')
-	var musicList_html=''
+	var musicList_html = ''
 	for (var i = 0; i < musicList.length; i++) {
-		musicList_html+='<div class="music '+i+'" onclick="clickmusic('+i+')" ><span>'+musicList[i]+'</span></div>'
+		musicList_html += '<div class="music ' + i + '" onclick="clickmusic(' + i + ')" ><span>' + musicList[
+			i] + '</span></div>'
 	}
 	$('#music-list').html(musicList_html)
-	
+
+
+
 })
