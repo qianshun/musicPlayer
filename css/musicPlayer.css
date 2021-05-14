@@ -9,7 +9,9 @@ body {
 h1:hover {
     color: #0000ff;
 }
-
+#music-name{
+	visibility:hidden
+}
 #img-container {
     margin-bottom: 20px;
     margin-top: 20px;
@@ -34,32 +36,47 @@ h1:hover {
     animation-play-state: paused;
 }
 
+#prosser-container{
+	height: 10px;
+	background-color:#aaff7f;
+	opacity: 0.3;
+	cursor: pointer;
+	margin-left: 30%;
+	margin-right:30% ;
+	visibility:hidden;
+}
+
+#prosser{
+	background-color: #33edfb;
+	border-radius: 4px;
+	height: 100%;
+	width: 0%;
+	transition: width 0.1s linear;
+}
+
 #action-div {
     margin: auto;
-    width: 60%;
-    height: 100px;
+    /* width: 60%; */
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	
 }
 
-#action-div:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+
 
 .icon_lists {
-    margin-top: 20px;
     display: flex;
-    text-align: justify;
-    float: left;
-    width: 25%;
-    height: 100px;
+   /* text-align: justify; */
+	align-items: center;
+    width: 120px;
+    height: 120px;
     font-size: 42px;
 
 }
 
 .icon {
 
-    display: block;
     width: 1em;
     height: 1em;
     margin: auto;
@@ -72,4 +89,16 @@ h1:hover {
 
 .icon_lists:hover {
     font-size: 100px;
+}
+
+#music-list{
+	
+	cursor: pointer;
+	margin-left: 30%;
+	margin-right:30% ;
+}
+
+.music{
+	border-radius: 15px;
+	opacity: 0.7;
 }
