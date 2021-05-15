@@ -36,8 +36,8 @@ h1:hover {
 }
 
 .playimg {
-    width: 200px;
-    height: 200px;
+   width: 10rem;
+    height: 10rem;
     border-radius: 50%;
     /* 360°旋转，默认不动 */
     animation: rotate 3s linear infinite;
@@ -49,8 +49,8 @@ h1:hover {
 	background-color:#aaff7f;
 	opacity: 0.3;
 	cursor: pointer;
-	margin-left: 30%;
-	margin-right:30% ;
+	margin-left: 20%;
+	margin-right:20% ;
 	visibility:hidden;
 }
 
@@ -100,13 +100,19 @@ h1:hover {
 }
 
 #music-list{
-	margin-top: 500px;
+	margin-top: 450px;
 	cursor: pointer;
-	margin-left: 30%;
-	margin-right:30% ;
+/* 	margin-left: 30%;
+	margin-right:30% ; */
 }
 
 .music{
+	display: flex;
+	justify-content: center;
+	font-size: 1.25rem;
 	border-radius: 15px;
 	opacity: 0.7;
+}
+span{
+	width: 90%;
 }
